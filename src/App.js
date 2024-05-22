@@ -1,11 +1,25 @@
+import Button from './component/button'
+  
 
-function App() {
+function New(){
   return (
-    <div className="App">
-      <h1>hello world</h1>
-      <h2>login</h2>
+    <div>
+      <Button/>
     </div>
-  );
+  )
 }
-
-export default App;
+export function Function2(){
+  return (
+    <div>
+      <h1>functoin2</h1>
+    </div>
+  )
+}
+export function Function3(){
+  return (
+    <div>
+      <h1>functoin3</h1>
+    </div>
+  )
+}
+export default New
