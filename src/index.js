@@ -1,15 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App,{Function2 as F,Function3} from './App';
+import App,{Function2 as F2,Function3} from './App';
 import reportWebVitals from './reportWebVitals';
+import Display from './App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
-    <F />
-    <Function3 />
+    <Display />
   </React.StrictMode>
 );
 
