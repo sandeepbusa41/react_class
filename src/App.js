@@ -25,7 +25,10 @@ function Display(){
       {ipl.map((value)=>{
         return(
           <div>
-            <h1>{value.team}</h1>
+            <h1 style={{
+              color:'red',
+              backgroundColor:'black',
+            }}>{value.team}</h1>
             <ol>
             {value.players.map((na)=>{
               return(

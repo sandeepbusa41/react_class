@@ -1,14 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App,{Function2 as F2,Function3} from './App';
 import reportWebVitals from './reportWebVitals';
-import Display from './App';
+import Display from './component/button';
+import Accordiancomponent from './component/accordian';
+import Spinnercomponent from './component/spinser';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Navbarcomponent from './navbar';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Display />
+    {/* <Display /> */}
+    <Navbarcomponent/>
+    <Spinnercomponent></Spinnercomponent>
+    <Accordiancomponent/>
+    
+
   </React.StrictMode>
 );
 
