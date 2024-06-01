@@ -2,20 +2,18 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import Display from './component/button';
-import Accordiancomponent from './component/accordian';
-import Spinnercomponent from './component/spinser';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Navbarcomponent from './navbar';
+// import Display from './component/button';
+// import Accordiancomponent from './component/accordian';
+// import Spinnercomponent from './component/spinser';
+// import 'bootstrap/dist/css/bootstrap.min.css';
+// import Navbarcomponent from './navbar';
+import App from './App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    {/* <Display /> */}
-    <Navbarcomponent/>
-    <Spinnercomponent></Spinnercomponent>
-    <Accordiancomponent/>
     
+    <App/>
 
   </React.StrictMode>
 );

@@ -1,75 +1,23 @@
-function Display(){
-    const ipl=[
-      {
-        team:'KKR',
-        players:['Salt(wk)','Narain','Nthish','Venkatesh','Shreyas(c)','Russel','Rinku','Ramandeep','Starc','Varun','harshith'],
-      },
-      {
-        team:'RCB',
-        players:['kohli','faf(c)','max','patidhar','green','dk(wk)','lomror','karan','ferguson','dayal','siraj'],
-      },
-      {
-        team:'SRH',
-        players:['head','abhishek','tripati','nithish','markram','klassen(wk)','samadh','shabas','pat(c)','bhuvneshwar','natrajan']
-      }
-  
-    ]
-      
-  
-    return (
+import { Children } from "react"
+
+   
+const Button=(prop)=>{
+  console.log(prop)
+  const {text}=prop
+     return(
       <div>
-        <div>
-        {ipl.map((value)=>{
-          return(
-            <div>
-              <h1 style={{
-                color:'red',
-                backgroundColor:'black',
-              }}>{value.team}</h1>
-              <ol>
-              {value.players.map((na)=>{
-                return(
-                  
-                    <li>{na}</li>
-                  
-                )
-              })}
-            </ol>
-            </div>
-          )
-        })}
-        </div>
-        <div>
-          <table>
-        {ipl.map((value)=>{
-          return(
-            <div>
-              
-              <th>{value.team}</th>
-              <tr>
-              {value.players.map((na)=>{
-                return(
-                  
-                    <td>{na}</td>
-                  
-                )
-              })}
-            </tr>
-            
-            </div>
-          )
-        })}
-        </table>
-        </div>
-      
-  
+      <button >{text}</button>
       </div>
-      
-  
-  
-  
-  
-    )
-  
-  }
-  export default Display
+     )
+}
+const Button2=(prop)=>{
+  const{children}=prop
+  const {text}=prop
+     return(
+      <div>
+      <button >Signin {children}</button>
+      </div>
+     )
+}
+
+export {Button,Button2};
