@@ -1,15 +1,12 @@
 import {Button,Button2} from './component/button';
-
-
+import Sub from './component/states';
+import Todo from './component/todo';
 
 function App(){
       return(
         <div>
-        <Button text={'hello'}>   </Button>
-        <Button text={'Signin'}>   </Button>
-        
-        <Button2>Button</Button2>
-        <Button2>Bomb</Button2>
+        <Sub/>
+        <Todo/>
         </div>
       )
 }
