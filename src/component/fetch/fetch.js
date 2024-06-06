@@ -7,15 +7,22 @@ class Products extends Component{
      state={
         recepielist:[],
         issucess:false,
+        showdata:false,
      }
 
     fetchdata=()=>{
+
+        if (this.state.showdata) {
+            // If data is already shown, hide it
+            this.setState({ showdata: false });
+          } else {
         fetch('https://dummyjson.com/recipes')
         .then(res=>res.json()).then((response)=>{
             const { recipes }=response
             this.setState({
                 recepielist:recipes,
                 issucess:true,
+                showdata:true,
             },()=>{
                   console.log(this.state.recepielist)
             }
@@ -25,6 +32,7 @@ class Products extends Component{
 
         })
     }
+    }
 
 
     render(){
@@ -33,9 +41,10 @@ class Products extends Component{
             <h1>hello world!</h1>
             <button  onClick={this.fetchdata}>CLICK</button>
             {
-                this.state.issucess?
+                this.state.showdata?
+                (this.state.issucess?
                 
-                this.state.recepielist.map((eachitem)=>{
+                (this.state.recepielist.map((eachitem)=>{
                     return(
 
                         <>
@@ -51,7 +60,7 @@ class Products extends Component{
 
 
 
-                }):<h1>loading</h1>
+                })):(<h1>loading</h1>)):null
             }
             </>
 
