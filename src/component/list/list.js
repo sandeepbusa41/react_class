@@ -1,4 +1,4 @@
-import { Component } from "react";
+import React, { Component } from "react";
 
 class Listcomponent extends Component{
 
@@ -8,11 +8,11 @@ class Listcomponent extends Component{
                <ol>
 
                {
-                this.props.ing.map((eachitem)=>{
+                this.props.ing.map((eachitem,index)=>{
                     return(
-                        <>
+                        <React.Fragment key={index}>
                         <li>{eachitem}</li>
-                        </>
+                        </React.Fragment>
                     )
 
                 })
