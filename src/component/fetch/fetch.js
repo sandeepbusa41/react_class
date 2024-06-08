@@ -1,8 +1,8 @@
 import { Component } from "react";
 import  Image  from "../img/image";
 import Listcomponent from "../list/list";
-
-
+import Loader from "../react-loaders/spinners";
+import Spinner from "../react-loaders/rotatinglines";
 class Products extends Component{
      state={
         recepielist:[],
@@ -33,11 +33,16 @@ class Products extends Component{
         })
     }
     }
+    componentDidMount(){
+        this.fetchdata()
+    }
 
 
     render(){
         return(
             <>
+            <Spinner />
+            <Loader color={'green'} bgcolor={'blue'}/>
             <h1>hello world!</h1>
             <button  onClick={this.fetchdata}>CLICK</button>
             {
@@ -60,7 +65,7 @@ class Products extends Component{
 
 
 
-                })):(<h1>loading</h1>)):null
+                })):(<Spinner/>)):null
             }
             </>
 
