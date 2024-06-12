@@ -6,12 +6,13 @@ import Productss from './component/fetch/sample';
 import Parent from './component/unmountingphase/parent';
 import LoginForm from './component/forms/login';
 import UserProfile from './component/profile/profile';
+import 'bootstrap/dist/css/bootstrap.min.css';
 function App(){
 
 
       return(
         <div>
-        <UserProfile/>
+        <LoginForm/>
         
         </div>
       )
