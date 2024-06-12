@@ -4,13 +4,14 @@ import Todo from './component/todo';
 import Products from './component/fetch/fetch';
 import Productss from './component/fetch/sample';
 import Parent from './component/unmountingphase/parent';
+import LoginForm from './component/forms/login';
+import UserProfile from './component/profile/profile';
 function App(){
 
 
       return(
         <div>
-        {/* <Products   fevcolor={'green'}/> */}
-        <Parent/>
+        <UserProfile/>
         
         </div>
       )
