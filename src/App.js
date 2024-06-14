@@ -7,12 +7,13 @@ import Parent from './component/unmountingphase/parent';
 import LoginForm from './component/forms/login';
 import UserProfile from './component/profile/profile';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import UseEffect from './component/useEffect/useEffectEx1';
 function App(){
 
 
       return(
         <div>
-        <LoginForm/>
+        <UseEffect/>
         
         </div>
       )
