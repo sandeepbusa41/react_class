@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import './dropdown.css';
+import { Link } from "react-router-dom";
 
 function DropDown() {
   const [data, setData] = useState([]);
@@ -16,19 +17,45 @@ function DropDown() {
 
   const apidata = async () => {
     const response = await axios.get(`https://fakestoreapi.com/products`);
-    setData(response.data);
+    
+    const updatedata=response.data.map((product)=>({
+      ...product,
+      description:reduceDescription(product.description)
+      
+
+    }))
+    setData(updatedata);
   };
+  console.log(data.description)
+
+
+
+
+  const reduceDescription=(desc)=>{
+    return desc.length>70?desc.slice(0,70)+'.....':desc
+    
+
+  }
 
   const categoryapi=async()=>{
     const categorys=await axios.get('https://fakestoreapi.com/products/categories')
     setCategory([...category,...categorys.data])
+    // reduceDescription(data.description)
 
   }
 
   const catapi=async(cat)=>{
 
-    const {data}=await axios.get(`https://fakestoreapi.com/products/category/${cat}`)
-     setData(data)
+    const response=await axios.get(`https://fakestoreapi.com/products/category/${cat}`)
+
+    const updatedata=response.data.map((product)=>({
+      ...product,
+      description:reduceDescription(product.description)
+      
+
+    }))
+    setData(updatedata);
+    //  reduceDescription(data.description)
   }
   function handlechange(event){
     const optionselected=event.target.value
@@ -72,7 +99,18 @@ function DropDown() {
               />
               <h1>{eachproduct.title}</h1>
               <p>{eachproduct.description}</p>
+              
+
+              
+              
+      
+              
+    
               <p>${eachproduct.price}</p>
+              <button>
+                <Link  to={`${eachproduct.category}/${eachproduct.id}`} style={{color:'white',textDecoration:'none'}}>See More</Link>
+                
+                </button>
             </div>
           );
         })}
