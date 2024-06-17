@@ -54,7 +54,7 @@ function UseEffect(){
                     })
                 }
             </div>
-         </div>
+        </div>
     )
 }
 export default UseEffect

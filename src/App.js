@@ -8,12 +8,13 @@ import LoginForm from './component/forms/login';
 import UserProfile from './component/profile/profile';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import UseEffect from './component/useEffect/useEffectEx1';
+import Navgationcomponent from './Navigations/navigations';
 function App(){
 
 
       return(
         <div>
-        <UseEffect/>
+          <Navgationcomponent></Navgationcomponent>
         
         </div>
       )
