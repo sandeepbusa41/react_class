@@ -9,12 +9,16 @@ import UserProfile from './component/profile/profile';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import UseEffect from './component/useEffect/useEffectEx1';
 import Navgationcomponent from './Navigations/navigations';
+import { Provider } from 'react-redux';
+import { reduxstore } from './redux/store';
 function App(){
 
 
       return(
         <div>
+          <Provider store={reduxstore}>
           <Navgationcomponent></Navgationcomponent>
+          </Provider>
         
         </div>
       )
